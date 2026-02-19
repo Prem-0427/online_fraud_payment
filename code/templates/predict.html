@@ -1,3 +1,69 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:147d85c4b60bf09841bb914aeb5d99a1a88456765eab785d70276d0751133321
-size 3040
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fraud Prediction</title>
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background:#b8e8ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container{
+    width:60%;
+    background:white;
+    display:flex;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    border-radius:10px;
+    overflow:hidden;
+}
+.left{
+    width:50%;
+    padding:30px;
+}
+.right{
+    width:50%;
+    background:url("https://i.imgur.com/5FfZ1sF.png");
+    background-size:cover;
+}
+input,select{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+button{
+    padding:12px;
+    background:#003366;
+    color:white;
+    border:none;
+    width:100%;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="left">
+<h2>Fraud Detection</h2>
+<form action="/predict" method="post">
+<input name="step" placeholder="Step" required>
+<select name="type">
+<option>PAYMENT</option>
+<option>TRANSFER</option>
+<option>CASH_OUT</option>
+<option>DEBIT</option>
+</select>
+<input name="amount" placeholder="Amount" required>
+<input name="oldbalanceOrg" placeholder="Old Balance Origin" required>
+<input name="newbalanceOrig" placeholder="New Balance Origin" required>
+<input name="oldbalanceDest" placeholder="Old Balance Destination" required>
+<input name="newbalanceDest" placeholder="New Balance Destination" required>
+<button>Check Fraud</button>
+</form>
+</div>
+<div class="right"></div>
+</div>
+</body>
+</html>
