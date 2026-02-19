@@ -1,33 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Result</title>
+<title>Fraud Result</title>
+
 <style>
 body{
-    background:#0f2027;
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(120deg, #141e30, #243b55);
     color:white;
-    font-family:Arial;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
-.box{
-    background:#203a43;
-    padding:50px;
-    border-radius:10px;
     text-align:center;
 }
-a{
-    color:#00c3ff;
-    text-decoration:none;
+
+.result-box{
+    margin-top:150px;
+    padding:40px;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    background: rgba(255,255,255,0.1);
+    border-radius:20px;
+    box-shadow:0 0 20px #00c3ff;
+    animation: zoom 1s;
+}
+
+h1{
+    font-size:40px;
+}
+
+h2{
+    margin-top:20px;
+    font-size:30px;
+}
+
+.safe{
+    color:#00ff99;
+}
+
+.fraud{
+    color:#ff4c4c;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#00c3ff;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#00f2fe;
+}
+
+@keyframes zoom{
+    from{transform:scale(0.5);}
+    to{transform:scale(1);}
 }
 </style>
 </head>
+
 <body>
-<div class="box">
-<h1>{{ result }}</h1>
-<a href="/predict_page">Check Another Transaction</a>
+
+<div class="result-box">
+    <h1>Transaction Analysis Result</h1>
+
+    {% if "Fraud" in prediction_text %}
+        <h2 class="fraud">{{ prediction_text }}</h2>
+        <p>This transaction is risky and has been blocked to protect your account.</p>
+    {% else %}
+        <h2 class="safe">{{ prediction_text }}</h2>
+        <p>This transaction appears safe and has been approved.</p>
+    {% endif %}
+
+    <a href="/">
+        <button>Check Another Transaction</button>
+    </a>
 </div>
+
 </body>
 </html>
