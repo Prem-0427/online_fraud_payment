@@ -85,4 +85,182 @@ Main features include:
 ---
 
 ## 🏗️ Project Structure
+online_fraud/
+│
+├── fraud.csv
+├── train_model.py
+├── app.py
+├── model.pkl
+├── encoder.pkl
+├── scaler.pkl
+├── requirements.txt
+│
+├── templates/
+│ ├── home.html
+│ ├── predict.html
+│ └── submit.html
+│
+└── static/
 
+
+---
+
+## 🔄 Project Workflow
+
+1. Data Collection
+2. Data Cleaning & Preprocessing
+3. Handling Missing Values
+4. Encoding Categorical Variables
+5. Feature Scaling
+6. Train-Test Split
+7. Model Training
+8. Model Evaluation
+9. Save Model (model.pkl)
+10. Flask Integration
+11. Deployment
+
+---
+
+## 🖥️ Installation & Setup
+
+### Step 1: Clone Repository
+
+
+
+git clone https://github.com/your-username/online-fraud-detection.git
+
+cd online-fraud-detection
+
+
+### Step 2: Create Virtual Environment
+
+
+
+conda create -n fraud_env python=3.10
+conda activate fraud_env
+
+
+### Step 3: Install Requirements
+
+pip install -r requirements.txt
+
+
+---
+
+## ▶️ Running the Application
+
+### Step 1: Train Model
+
+
+
+python train_model.py
+
+
+This will generate:
+- model.pkl
+- encoder.pkl
+- scaler.pkl
+
+### Step 2: Run Flask App
+python app.py
+Open browser:
+
+http://127.0.0.1:5000/
+
+
+---
+
+## 🌐 Deployment
+
+The application can be deployed on:
+
+- Render
+- IBM Cloud
+- Heroku
+- AWS EC2
+
+Deployment Steps (Render):
+
+1. Push code to GitHub
+2. Connect GitHub to Render
+3. Add Build Command:
+
+
+pip install -r requirements.txt
+
+4. Add Start Command:
+
+
+python app.py
+
+
+---
+
+## 🔐 Features
+
+- Real-time fraud prediction
+- Multiple ML model comparison
+- Clean user interface
+- Scalable deployment
+- High accuracy prediction
+
+---
+
+## 📈 Model Performance
+
+Example (Random Forest):
+
+- Accuracy: ~95%
+- Precision: High
+- Recall: High
+- F1 Score: Balanced
+
+---
+
+## 🧪 Testing
+
+- Manual Testing
+- Model Evaluation Metrics
+- Confusion Matrix Analysis
+- Cross Validation
+
+---
+
+## ⚠️ Known Issues
+
+- Large dataset increases training time
+- Requires significant memory for full dataset
+- Model accuracy depends on data quality
+
+---
+
+## 🚀 Future Enhancements
+
+- Real-time transaction API integration
+- Deep Learning model implementation
+- Fraud pattern visualization dashboard
+- Role-based authentication
+- Cloud auto-scaling deployment
+
+---
+
+## 👨‍💻 Team Details
+
+- Team ID: LTVIP2026TMIDS63406  
+- Team Leader: Anda Tharun  
+- Team Member: Mannaru Prem Kumar  
+- Team Member: Chavva Tarun  
+- Team Member: Gaduputi Hima Varshini  
+
+---
+
+## 📌 Conclusion
+
+This project demonstrates how Machine Learning can effectively detect fraudulent transactions and reduce financial risk.  
+The system is scalable, efficient, and ready for real-world deployment.
+
+---
+
+## 📎 License
+
+This project is for educational purposes.
