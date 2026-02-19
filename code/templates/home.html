@@ -2,17 +2,32 @@
 <html>
 <head>
 <title>Online Fraud Detection</title>
+
 <style>
 body{
     margin:0;
     font-family: Arial;
-    background: linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
     color:white;
     text-align:center;
 }
-.hero{padding-top:120px;}
-h1{font-size:50px;}
-p{font-size:20px;width:60%;margin:auto;}
+
+.hero{
+    padding-top:100px;
+}
+
+h1{
+    font-size:50px;
+    animation: fadeIn 2s;
+}
+
+p{
+    font-size:20px;
+    width:60%;
+    margin:auto;
+    animation: fadeIn 3s;
+}
+
 button{
     margin-top:40px;
     padding:18px 40px;
@@ -20,20 +35,70 @@ button{
     border:none;
     border-radius:30px;
     background:#00c3ff;
+    color:black;
     cursor:pointer;
+    transition:0.3s;
 }
-button:hover{background:#00f2fe;transform:scale(1.1);}
+
+button:hover{
+    background:#00f2fe;
+    transform: scale(1.1);
+}
+
+.section{
+    margin-top:80px;
+    padding:50px;
+    background: rgba(255,255,255,0.05);
+}
+
+.section h2{
+    color:#00c3ff;
+    font-size:32px;
+}
+
+.section p{
+    width:70%;
+    font-size:18px;
+    line-height:1.7;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
 </style>
 </head>
 
 <body>
-<div class="hero">
-<h1>Online Payments Fraud Detection</h1>
-<p>
-This system uses Machine Learning to detect fraud in online transactions and protect users from financial loss.
-</p>
 
-<a href="/predict_page"><button>Start Fraud Detection</button></a>
+<div class="hero">
+    <h1>Online Payments Fraud Detection</h1>
+    <p>
+        A machine learning based intelligent system to detect fraudulent online transactions.
+        This system analyzes customer behavior and transaction patterns to prevent financial loss.
+    </p>
+
+    <a href="/predict_page">
+        <button>Start Fraud Detection</button>
+    </a>
 </div>
+
+<!-- New Information Section -->
+<div class="section">
+    <h2>About Online Payment Frauds</h2>
+    <p>
+        Online payment frauds occur when unauthorized or illegal transactions are carried out
+        using digital payment systems such as UPI, debit cards, credit cards, and online banking.
+        Fraudsters often exploit weak security, stolen credentials, or loopholes in payment
+        systems to transfer money illegally.
+    </p>
+    <p>
+        With the rapid growth of digital transactions, fraud detection systems powered by
+        Machine Learning have become essential. These systems analyze transaction patterns,
+        user behavior, and balance changes to identify suspicious activities in real time
+        and help prevent financial losses.
+    </p>
+</div>
+
 </body>
 </html>
