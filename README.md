@@ -102,6 +102,7 @@ online_fraud/
 
 ├── requirements.txt
 │
+
 ├── templates/
 
 │ ├── home.html
