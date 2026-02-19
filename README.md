@@ -87,9 +87,13 @@ Main features include:
 ## 🏗️ Project Structure
 online_fraud/
 │
+
 ├── fraud.csv
+
 ├── train_model.py
+
 ├── app.py
+
 ├── model.pkl
 ├── encoder.pkl
 ├── scaler.pkl
