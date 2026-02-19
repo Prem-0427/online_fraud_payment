@@ -95,15 +95,23 @@ online_fraud/
 ├── app.py
 
 ├── model.pkl
+
 ├── encoder.pkl
+
 ├── scaler.pkl
+
 ├── requirements.txt
 │
 ├── templates/
+
 │ ├── home.html
+
 │ ├── predict.html
+
 │ └── submit.html
+
 │
+
 └── static/
 
 
